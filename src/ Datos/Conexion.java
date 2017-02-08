@@ -22,13 +22,15 @@ public class Conexion {
     private static Connection conect = null;
     
     public static void conexion (){
-        
+       
         try {
             try {
                  Class.forName("com.mysql.jdbc.Driver");
                Connection  con = DriverManager.getConnection("jdbc:mysql://localhost/porteria","root","");
                 setConect(con);
                 JOptionPane.showMessageDialog(null, "Ok");
+                
+                //hola lizeth
                 
             } catch (SQLException ex) {
                 Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
